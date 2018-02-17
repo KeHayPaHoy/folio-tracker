@@ -8,9 +8,8 @@ describe('Writer', () => {
     describe('#write()', () => {
         it('should write a message', () => {
 
-            let spy = sinon.spy(console, 'log');
-
-            var writer = new Writer();
+            const spy = sinon.spy(console, 'log');
+            const writer = new Writer();
             writer.write('I am being tested!');
 
             assert(spy.calledWith('I am being tested!'));
@@ -20,9 +19,8 @@ describe('Writer', () => {
         });
         it('should write a default message', () => {
 
-            let spy = sinon.spy(console, 'log');
-
-            var writer = new Writer();
+            const spy = sinon.spy(console, 'log');
+            const writer = new Writer();
             writer.write();
 
             assert(spy.calledWith('Hello World!'));
