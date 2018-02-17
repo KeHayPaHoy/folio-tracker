@@ -5,6 +5,7 @@
 	"repository": "",
 	"license": "MIT",
 	"scripts": {
+		"start": "node dist/bin/main",
 		"clean": "rimraf dist",
 		"build": "npm run clean && tsc --pretty",
 		"test": "npm run build && mocha --compilers ts:ts-node/register --recursive test/**/*-spec.ts",
@@ -15,8 +16,8 @@
 		"name": "Sergio Leon",
 		"email": "serge@khph.in"
 	},
-	"main": "dist/bin/app.js",
-	"typings": "dist/bin/app.d.ts",
+	"main": "dist/bin/main.js",
+	"typings": "dist/bin/main.d.ts",
 	"bin": {
 		"ftrack": "bin/ftrack"
 	},
